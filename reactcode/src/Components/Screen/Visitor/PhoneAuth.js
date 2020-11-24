@@ -8,13 +8,14 @@ import {LoginButtonViewer,SignupButtonViewer} from '../Admin/Auth/Login/Resource
 const PhoneAuth = () => {
     return (
         <div>
+            <span>외부 방문자 로그인</span><br/>
             <Viewer>
                 <InputViewer type="text" placeholder="휴대전화 번호 ('-'제외 번호만 입력)" />
-                <InputViewer className="sendPhoneNumBtn" type="submit" value="인증하기"/><br/>
-                <InputViewer type="text" placeholder="인증코드(8자리):" /><br/>
-                <InputViewer type ="text"placeholder="이름:" /><br/>
-                <InputViewer type="text" placeholder="소속:"/><br/>
-                <SignupButtonViewer className="form_submit_button" type="submit">확인</SignupButtonViewer>
+                <InputViewer className="sendPhoneNumBtn" type="submit" value="인증하기"/>
+                <InputViewer type="text" placeholder="인증코드(8자리):" />
+                <InputViewer type ="text"placeholder="이름:" />
+                <InputViewer type="text" placeholder="소속:"/>
+                <LoginButtonViewer className="form_submit_button" type="submit">확인</LoginButtonViewer>
             </Viewer>
             
         </div>

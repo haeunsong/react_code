@@ -9,7 +9,7 @@ export const AdminLogin=()=>{
             <span>건물 관리자 로그인</span><br/>
                 <InputViewer type="email" placeholder="메일주소를 입력하세요(@office.skhu.ac.kr):"/>
                 <InputViewer type="password" placeholder="비밀번호를 입력하세요:"/>
-                <LoginButtonViewer type="submit" >확인</LoginButtonViewer>
+                <LoginButtonViewer type="submit">확인</LoginButtonViewer>
         </Viewer>
     );
 }
@@ -17,7 +17,6 @@ export const AdminLogin=()=>{
 // admin/signup
 export const AdminSignUp=()=>{
     return (
-        // <InputViewer>
         <Viewer>
             <span>건물 관리자 가입</span><br/>
                 <InputViewer name="adminEmail" type="email" placeholder="학내메일(***@office.skhu.ac.kr):"/>
@@ -31,7 +30,6 @@ export const AdminSignUp=()=>{
                 <SignupButtonViewer type="submit" >확인</SignupButtonViewer>
         </Viewer>
                     
-        // </InputViewer>
     );
 }
 

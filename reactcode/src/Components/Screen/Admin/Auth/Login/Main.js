@@ -8,7 +8,7 @@ const Main = ({setClickView}) => {
     const [buttonAble,setButtonAble] = useState(true);
     const emailUseInput = useInput("email");
     const passwordUseInput = useInput("password");
-    const doLogin = useDoLogin();
+    // const doLogin = useDoLogin();
     // const [requestUserTokenMutation] = useMutation(REQUEST_USERTOKEN);
     
     const onSignupClick=()=>{
