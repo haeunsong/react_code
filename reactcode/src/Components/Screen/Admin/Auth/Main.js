@@ -1,14 +1,15 @@
 import React,{useState} from 'react';
 import {useInput,Input} from './Input';
-import {onLogin,LoginButton, SignupButton, onSignup,EmailCertifyButton,onEmailCertify} from './Button';
+import {onAdminLogin,LoginButton, SignupButton, onSignup,EmailCertifyButton,onEmailCertify} from './Button';
 import Viewer from './Resource/Style/StMain'
 // admin/login
+// 한 번 로그인하면 계속 유지
 export const AdminLogin=()=>{
     const emailUseInput = useInput("학내메일로 로그인(@office.skhu.ac.kr):");
     const passwordUseInput = useInput("비밀번호를 입력하세요:");
     
     const onLoginClick=()=>{
-        onLogin(emailUseInput.value, passwordUseInput.value);
+        onAdminLogin(emailUseInput.value, passwordUseInput.value);
     }
     // useInput이 반환하는 것: placeholder,value,onChange
     return (
@@ -42,7 +43,7 @@ export const AdminSignUp=()=>{
     // 기기에 ID,비번 저장해서 두번째부터는 바로 로그인.
     return (
         <Viewer> 
-            <span>건물 관리자 가입</span>
+            <span>건물 관리자 회원가입</span>
                 <Input type="email" {...emailUseInput}/>
 
                 <EmailCertifyButton onClick={onEmailCertifyClick} /> 
