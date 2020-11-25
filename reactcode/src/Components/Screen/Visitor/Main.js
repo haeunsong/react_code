@@ -2,6 +2,7 @@ import React from 'react';
 import Viewer from '../Admin/Auth/Resource/Style/StMain'
 import {useInput,Input} from '../Admin/Auth/Input';
 import { onPhoneCertify,onVistiorLogin,LoginButton,PhoneCertifyButton } from '../Admin/Auth/Button';
+import GlobalStyle from '../Admin/Auth/Resource/Style/StGlobal';
 
 // visitor/login
 // 방문자 휴대전화 번호 인증 화면(방문자 로그인)
@@ -24,8 +25,10 @@ export const VisitorLogin=()=>{
         onVistiorLogin(phoneUseInput.value, nameUseInput.value,majorUseInput.value);
     }
     return (
+        <>
+            <GlobalStyle />
             <Viewer>
-                <span>방문자 로그인(skhus앱이 없는 학생/교직원/교수 등)</span><br/>
+                <h1>방문자 로그인(skhus앱이 없는 학생/교직원/교수 등)</h1>
                 <Input type="text" {...phoneUseInput} />
                 <PhoneCertifyButton onClick={onPhoneCertifyClick} />
                 <Input type="text" {...certifyNumUseInput} />
@@ -33,6 +36,7 @@ export const VisitorLogin=()=>{
                 <Input type="text" {...majorUseInput} />
                 <LoginButton onClick={onLoginClick} />
             </Viewer>
+        </>
     );
 }
 

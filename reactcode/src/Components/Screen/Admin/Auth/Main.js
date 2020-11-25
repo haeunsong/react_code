@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {useInput,Input} from './Input';
 import {onAdminLogin,LoginButton, SignupButton, onSignup,EmailCertifyButton,onEmailCertify} from './Button';
 import Viewer from './Resource/Style/StMain'
+import GlobalStyle from './Resource/Style/StGlobal';
 // admin/login
 // 한 번 로그인하면 계속 유지
 export const AdminLogin=()=>{
@@ -13,12 +14,15 @@ export const AdminLogin=()=>{
     }
     // useInput이 반환하는 것: placeholder,value,onChange
     return (
-        <Viewer>
-            <span>건물 관리자 로그인</span>
-                <Input type="email" {...emailUseInput} />
-                <Input type="password" {...passwordUseInput} />  
-                <LoginButton onClick={onLoginClick} />
-        </Viewer>
+        <>
+            <GlobalStyle />
+                <Viewer>
+                    <h1>건물 관리자 로그인</h1>
+                    <Input type="email" {...emailUseInput} />
+                    <Input type="password" {...passwordUseInput} />  
+                    <LoginButton onClick={onLoginClick} />
+                </Viewer>
+        </>
     );
 }
 
@@ -42,8 +46,10 @@ export const AdminSignUp=()=>{
     // 학내메일로 인증 후 별도의 ID,비번으로 가입.
     // 기기에 ID,비번 저장해서 두번째부터는 바로 로그인.
     return (
-        <Viewer> 
-            <span>건물 관리자 회원가입</span>
+        <>
+        <GlobalStyle />
+            <Viewer> 
+                <h1>건물 관리자 회원가입</h1>
                 <Input type="email" {...emailUseInput}/>
 
                 <EmailCertifyButton onClick={onEmailCertifyClick} /> 
@@ -56,7 +62,8 @@ export const AdminSignUp=()=>{
                 <Input type="password" {...checkUserPwUseInput}/>
 
                 <SignupButton onClick={onSignupClick}></SignupButton>
-        </Viewer>
+            </Viewer>
+        </>
         
                     
     );

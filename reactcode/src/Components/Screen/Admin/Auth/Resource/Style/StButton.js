@@ -57,4 +57,5 @@ text-align: center;
 }
 
 `
+
 export default EmailCertifyButtonViewer;
