@@ -1,28 +1,21 @@
 import React,{useState} from 'react';
-import {useInput,Input} from './Login/Input';
-import {onLogin,LoginButton, SignupButton, onSignup} from './Login/Button';
-import Viewer from './Login/Resource/Style/StMain'
+import {useInput,Input} from './Input';
+import {onLogin,LoginButton, SignupButton, onSignup,EmailCertifyButton,onEmailCertify} from './Button';
+import Viewer from './Resource/Style/StMain'
 // admin/login
 export const AdminLogin=()=>{
-    const emailUseInput = useInput("메일주소를 입력하세요(@office.skhu.ac.kr):");
+    const emailUseInput = useInput("학내메일로 로그인(@office.skhu.ac.kr):");
     const passwordUseInput = useInput("비밀번호를 입력하세요:");
     
     const onLoginClick=()=>{
         onLogin(emailUseInput.value, passwordUseInput.value);
     }
+    // useInput이 반환하는 것: placeholder,value,onChange
     return (
         <Viewer>
             <span>건물 관리자 로그인</span>
                 <Input type="email" {...emailUseInput} />
-                    {/* // placeholder={emailUseInput.placeholder}
-                    // onChange = {emailUseInput.onChange}
-                    // value = {emailUseInput.value} 
-                // /> */}
-                <Input type="password" {...passwordUseInput} />
-                    {/* placeholder={passwordUseInput.placeholder}
-                    onChange={passwordUseInput.onChange}
-                    value={passwordUseInput.value} */}
-                
+                <Input type="password" {...passwordUseInput} />  
                 <LoginButton onClick={onLoginClick} />
         </Viewer>
     );
@@ -30,24 +23,38 @@ export const AdminLogin=()=>{
 
 // admin/signup
 export const AdminSignUp=()=>{
-    const emailUseInput = useInput("학내메일(***@office.skhu.ac.kr):");
-    const passwordUseInput = useInput("비밀번호를 입력하세요:");
+    const emailUseInput = useInput("학내메일로 가입(***@office.skhu.ac.kr):");
+    const nameUseInput = useInput("이름:");
+    const majorUseInput = useInput("학과(학부):");
+    const userIdUseInput = useInput("사용할 ID 입력:");
+    const userPwUseInput = useInput("사용할 PW 입력:");
+    const checkUserPwUseInput = useInput("PW 확인:");
 
-    const onSignupClick=()=>{
-        onSignup(emailUseInput.value,passwordUseInput.value);
+    const onEmailCertifyClick=()=>{
+        // 이메일로 인증링크 보냄. 서버랑 연결..?
+        onEmailCertify();
     }
+    const onSignupClick=()=>{
+        onSignup(userIdUseInput.value,userPwUseInput.value);
+    }
+    // useInput이 반환하는 것: placeholder,value,onChange
+    // 학내메일로 인증 후 별도의 ID,비번으로 가입.
+    // 기기에 ID,비번 저장해서 두번째부터는 바로 로그인.
     return (
         <Viewer> 
             <span>건물 관리자 가입</span>
                 <Input type="email" {...emailUseInput}/>
-                {/* <Input type="submit" value="인증하기"/> 
-                <Input type="text" placeholder="학내메일 인증코드(8자리):"/> */}
-                <Input type="text" placeholder="이름:"/>
-                <Input type="text" placeholder="소속:"/>
-                <Input type="text" placeholder="ID:"/>
-                <Input type="password" placeholder="PW:"/>
-                <Input type="password" placeholder="PW 확인:"/>
-                <SignupButton type="submit" >확인</SignupButton> */}
+
+                <EmailCertifyButton onClick={onEmailCertifyClick} /> 
+
+                <Input type="text" {...nameUseInput}/> 
+                <Input type="text" {...majorUseInput}/>
+
+                <Input type="text" {...userIdUseInput}/>
+                <Input type="password" {...userPwUseInput}/>
+                <Input type="password" {...checkUserPwUseInput}/>
+
+                <SignupButton onClick={onSignupClick}></SignupButton>
         </Viewer>
         
                     
