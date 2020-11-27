@@ -14,13 +14,14 @@ export const LoginButtonViewer = styled.button`
   }
 `;
 
-export const moveToSignupButtonViewer = styled.button`
-width: 250px;
-height: 40px;
+export const MoveToSignupButtonViewer = styled.button`
+width: 100px;
+height: 30px;
+margin: 10px;
 
 border: 0;
 border-radius: 2px;
-font-size: 14px;
+font-size: 12px;
 text-align: center;
 
 &:hover {
@@ -28,5 +29,3 @@ text-align: center;
 }
 
 `;
-
-export default moveToSignupButtonViewer;

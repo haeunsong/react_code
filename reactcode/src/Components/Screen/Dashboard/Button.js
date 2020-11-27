@@ -9,9 +9,9 @@ export const AccessLogButton = ({ onClick }) => (
 export const DlAccessLogButton = ({ onClick }) => (
     <DlAccessLogButtonViewer onClick={onClick}>출입기록 다운로드</DlAccessLogButtonViewer>
 );
-export const KioskButton = ({ onClick }) => (
-    <KioskButtonViewer onClick={onClick}>키오스크</KioskButtonViewer>
-);
 export const AdminListButton = ({ onClick }) => (
     <AdminListButtonViewer onClick={onClick}>관리자 목록</AdminListButtonViewer>
+);
+export const KioskButton = ({ onClick }) => (
+    <KioskButtonViewer onClick={onClick}>키오스크</KioskButtonViewer>
 );

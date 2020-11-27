@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link,BrowserRouter } from 'react-router-dom';
 
-import {moveToSignupButton,LoginButton} from './Button'
+import {MoveToSignupButton,LoginButton} from './Button'
 import {useInput,Input} from '../../Resource/Input';
 import {onAdminLogin} from './Button';
-import {GlobalStyle} from '../../Resource/Style/StGlobal';
 import {Viewer} from '../../Resource/Style/StMain';
 
 
@@ -18,8 +17,6 @@ export const AdminLogin=()=>{
 
     // useInput이 반환하는 것: placeholder,value,onChange
     return (
-        <>
-            <GlobalStyle />
                 <Viewer>
                     <h1>건물 관리자 로그인</h1>
                     <Input type="email" {...emailUseInput} />
@@ -29,10 +26,8 @@ export const AdminLogin=()=>{
                         <LoginButton onClick={onLoginClick} />
                     </Link>
                     <Link to="/admin/signup">
-                        {/*회원가입 버튼누르면 회원가입 화면으로*/}
-                        <button>회원가입</button>
+                        <MoveToSignupButton>회원가입</MoveToSignupButton>
                     </Link>
                 </Viewer>
-        </>
     );
 }

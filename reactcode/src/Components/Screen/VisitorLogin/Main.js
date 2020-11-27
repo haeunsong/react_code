@@ -27,8 +27,6 @@ export const VisitorLogin=()=>{
         onVistiorLogin(phoneUseInput.value, nameUseInput.value,majorUseInput.value);
     }
     return (
-        <>
-            <GlobalStyle />
             <Viewer>
                 <h1>방문자 로그인</h1>
                 <Input type="text" {...phoneUseInput} />
@@ -42,7 +40,6 @@ export const VisitorLogin=()=>{
                 </Link>
 
             </Viewer>
-        </>
     );
 }
 

@@ -28,8 +28,6 @@ export const AdminSignUp=()=>{
     // 학내메일로 인증 후 별도의 ID,비번으로 가입.
     // 기기에 ID,비번 저장해서 두번째부터는 바로 로그인.
     return (
-        <>
-        <GlobalStyle />
             <Viewer> 
                 <h1>건물 관리자 회원가입</h1>
                 <Input type="email" {...emailUseInput}/>
@@ -49,8 +47,6 @@ export const AdminSignUp=()=>{
                 </Link>
 
             </Viewer>
-        </>
-        
                     
     );
 }

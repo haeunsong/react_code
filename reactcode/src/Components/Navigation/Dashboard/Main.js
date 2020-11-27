@@ -17,8 +17,8 @@ const Main = () => {
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/dashboard/accesslog" component={AccessLog} />
                 <Route exact path="/dashboard/dlaccesslog" component={DownloadAccessLog} />
-                <Route exact path="/dashboard/kiosk" component={Kiosk} />
                 <Route exact path="/dashboard/adminlist" component={AdminList} />
+                <Route exact path="/dashboard/kiosk" component={Kiosk} />
             </BrowserRouter>
             
     );
