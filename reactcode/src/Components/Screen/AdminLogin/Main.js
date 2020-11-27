@@ -26,7 +26,7 @@ export const AdminLogin=()=>{
                         <LoginButton onClick={onLoginClick} />
                     </Link>
                     <Link to="/admin/signup">
-                        <MoveToSignupButton>회원가입</MoveToSignupButton>
+                        <MoveToSignupButton />
                     </Link>
                 </Viewer>
     );
