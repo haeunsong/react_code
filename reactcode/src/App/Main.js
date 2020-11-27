@@ -1,19 +1,20 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-} from "react-router-dom";
 
-import Admin from './Router/Route/Admin'
-import Area from './Router/Route/Area'
-import Visitor from './Router/Route/Visitor'
+import GlobalStyle from '../Components/Resource/Style/StGlobal';
+import AdminLoginNavigation from '../Components/Navigation/AdminLogin/Main'
+import DashboardNavigation from '../Components/Navigation/Dashboard/Main'
+import VisitorLoginNavigation from '../Components/Navigation/VisitorLogin/Main'
 
 const Main = () => {
   return (
-      <Router>
-          <Admin />
-          <Area />
-          <Visitor />
-      </Router>
+    <>
+    <GlobalStyle />
+    <AdminLoginNavigation />
+    <DashboardNavigation />
+    <VisitorLoginNavigation />
+
+
+    </>
   );
 }
 
