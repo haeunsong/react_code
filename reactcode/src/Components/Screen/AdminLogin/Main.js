@@ -30,7 +30,7 @@ export const AdminLogin=()=>{
                     </Link>
                     <Link to="/admin/signup">
                         {/*회원가입 버튼누르면 회원가입 화면으로*/}
-                        <moveToSignupButton />
+                        <button>회원가입</button>
                     </Link>
                 </Viewer>
         </>

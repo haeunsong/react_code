@@ -44,7 +44,7 @@ export const AdminSignUp=()=>{
                 <Input type="password" {...checkUserPwUseInput}/>
 
                 <Link to="/admin/login">
-                {/*가입하기 버튼 누르면 로그인페이지로*/}
+                {/*가입하기 버튼 누르면 다시 로그인하라는 창 띄우고 로그인페이지로*/}
                     <SignupButton onClick={onSignupClick}></SignupButton>
                 </Link>
 

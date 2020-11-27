@@ -17,56 +17,68 @@ export const AreaList=()=>{
 }
 
 export const Dashboard=()=>{
-    <>
-    <GlobalStyle>
-        <Viewer>
-            <h1>dashboard</h1>
-            <Link to="/dashboard/accesslog">
-                <AccessLogButton />
-            </Link>
-            <Link to="/dashboard/dlaccesslog">
-                <DlAccessLogButton />
-            </Link>
-            <Link to="/dashboard/kiosk">
-                <KioskButton />
-            </Link>
-            <Link to="/dashboard/adminlist">
-                <AdminListButton />
-            </Link>
-  
-        </Viewer>
-    </GlobalStyle>
-    </>
+    return (
+        <>
+            <GlobalStyle>
+                <Viewer>
+                    <h1>dashboard</h1>
+                    <Link to="/dashboard/accesslog">
+                        <AccessLogButton />
+                    </Link>
+                    <Link to="/dashboard/dlaccesslog">
+                        <DlAccessLogButton />
+                    </Link>
+                    <Link to="/dashboard/kiosk">
+                        <KioskButton />
+                    </Link>
+                    <Link to="/dashboard/adminlist">
+                        <AdminListButton />
+                    </Link>
+        
+                </Viewer>
+            </GlobalStyle>
+            </>
+    )
+    
 }
 export const AccessLog=()=>{
-    <>
-    <GlobalStyle>
-        <Viewer>
-            <h1>출입기록</h1>
-            
-        </Viewer>
-    </GlobalStyle>
-    </>
+    return(
+        <>
+        <GlobalStyle>
+            <Viewer>
+                <h1>출입기록</h1>
+                
+            </Viewer>
+        </GlobalStyle>
+        </>
+    );
+ 
 }
 export const DownloadAccessLog=()=>{
-    <>
-    <GlobalStyle>
-        <Viewer>
-            <h1>출입기록 다운로드</h1>
-            
-        </Viewer>
-    </GlobalStyle>
-    </>
+    return(
+        <>
+        <GlobalStyle>
+            <Viewer>
+                <h1>출입기록 다운로드</h1>
+                
+            </Viewer>
+        </GlobalStyle>
+        </>
+    );
+
 }
 export const Kiosk=()=>{
-    <>
-    <GlobalStyle>
-        <Viewer>
-            <h1>키오스크</h1>
-            
-        </Viewer>
-    </GlobalStyle>
-    </>
+    return(
+        <>
+        <GlobalStyle>
+            <Viewer>
+                <h1>키오스크</h1>
+                
+            </Viewer>
+        </GlobalStyle>
+        </>
+    );
+
 }
 export const AdminList=()=>{
     return (

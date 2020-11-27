@@ -2,12 +2,11 @@ import React from 'react'
 
 import {LoginButtonViewer,moveToSignupButtonViewer} from '../AdminLogin/Resource/Style/StButton';
 
+export const moveToSignupButton = () => (
+    <moveToSignupButtonViewer>회원가입</moveToSignupButtonViewer>
+);
 export const LoginButton = ({ onClick }) => (
     <LoginButtonViewer onClick={onClick}>로그인하기</LoginButtonViewer>
-);
-
-export const moveToSignupButton = ({onClick}) => (
-    <moveToSignupButtonViewer onClick={onClick}>회원가입</moveToSignupButtonViewer>
 );
 
 export const onAdminLogin=(email,password)=>{

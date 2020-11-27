@@ -13,6 +13,7 @@ export const LoginButtonViewer = styled.button`
     background-color: #ffe6f1;
   }
 `;
+
 export const moveToSignupButtonViewer = styled.button`
 width: 250px;
 height: 40px;
@@ -27,3 +28,5 @@ text-align: center;
 }
 
 `;
+
+export default moveToSignupButtonViewer;

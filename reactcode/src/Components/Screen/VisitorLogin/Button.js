@@ -1,5 +1,5 @@
 import React from "react";
-import {PhoneCertifyButtonViewer} from './Resource/Style/StButton'
+import {PhoneCertifyButtonViewer,LoginButtonViewer} from './Resource/Style/StButton'
 
 export const onVistiorLogin=(phone,name,major)=>{
     console.log(phone,name,major);
