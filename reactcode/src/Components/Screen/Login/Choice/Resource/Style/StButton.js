@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const ChooseAdminButtonViewer = styled.button`
+export const AdminChoiceButtonViewer = styled.button`
 width: 250px;
 height: 40px;
 
@@ -14,7 +14,7 @@ text-align: center;
   background-color: #ffe6f1;
 }
 `;
-export const ChooseVisitorButtonViewer = styled.button`
+export const VisitorChoiceButtonViewer = styled.button`
 width: 250px;
 height: 40px;
 

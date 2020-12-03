@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import Viewer from '../Login/Choose/Resource/Style/StMain';
+import Viewer from '../Login/Choice/Resource/Style/StMain';
 import {AccessLogButton,DlAccessLogButton,AdminListButton,KioskButton} from './Button';
 export const DashBoardIdx = ({setDashboardClickView}) => {
   return (

@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import AdminLogin from "./Admin/Signin/Main";
 import AdminSignup from "./Admin/Signup/Main";
 import VisitorLogin from "./Visitor/Signin/Main";
-import ChooseUser from "./Choose/Main";
+import UserChoice from "./Choice/Main";
 
 const Main = () => {
   const [clickView, setClickView] = useState("");
@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <>
       {clickView === "" ? (
-        <ChooseUser setClickView={setClickView} />
+        <UserChoice setClickView={setClickView} />
       ) : (
         false
       )}
