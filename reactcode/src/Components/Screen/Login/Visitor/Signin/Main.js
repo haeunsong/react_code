@@ -1,15 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
 
-import {
-  onPhoneCertify,
-  onVistiorLogin,
-  LoginButton,
-  PhoneCertifyButton,
-} from "./Button";
-
-import { useInput, Input } from "./Input";
-import { Viewer } from "./Resource/Style/StMain";
+import { onPhoneCertify, onVistiorLogin, LoginButton, PhoneCertifyButton, BackButton } from './Button';
+import { useInput, Input } from './Input';
+import { Viewer, Title } from './Resource/Style/StMain';
 
 // visitor/login
 // 방문자 휴대전화 번호 인증 화면(방문자 로그인)
@@ -35,18 +28,20 @@ const Main = ({ setClickView }) => {
       majorUseInput.value
     );
   };
+  const onBackClick = () => {
+    setClickView('');
+  };
+
   return (
     <Viewer>
-      <h1>방문자 로그인</h1>
+      <Title>방문자 로그인</Title>
       <Input type="text" {...phoneUseInput} />
       <PhoneCertifyButton onClick={onPhoneCertifyClick} />
       <Input type="text" {...certifyNumUseInput} />
       <Input type="text" {...nameUseInput} />
       <Input type="text" {...majorUseInput} />
-
-      <Link to="/dashboard/kiosk">
-        <LoginButton onClick={onLoginClick} />
-      </Link>
+      <LoginButton onClick={onLoginClick} />
+      <BackButton onClick={onBackClick} />
     </Viewer>
   );
 };

@@ -1,22 +1,25 @@
 import React from "react";
+import { Route,Switch } from "react-router";
 
-import Login from "../../Screen/Login/Main";
-import { Route } from "react-router";
-import {DashBoardIdx,AccessLog,DlAccessLog, AdminList,Kiosk } from "../../Screen/Dashboard/DashboardIdx";
-import { Dashboard } from "../../Screen/Dashboard/Main"
+import Login from '../../Screen/Login/Main';
+import DashBoard from '../../Screen/Dashboard/Main';
+import AccessLog from '../../Screen/Dashboard/AccessLog';
+import DlAccessLog from '../../Screen/Dashboard/DlAccessLog';
+import AdminList from '../../Screen/Dashboard/AdminList';
+import Kiosk from '../../Screen/Dashboard/Kiosk';
 export const LoginRoute = () => {
   return <Login />;
 };
 export const DashboardRoute=()=>{
-  return <Dashboard />;
-    // <>
-    // <Route path="/dashboard" component={DashBoardIdx} />
-    // <Route path="/dashboard/accesslog" component={AccessLog} />
-    // <Route path="/dashboard/dlaccesslog" component={DlAccessLog} />
-    // <Route path="/dashboard/adminlist" component={AdminList} />
-    // <Route path="/dashboard/kiosk" component={Kiosk} />
-    // </>
-  
+  return (
+    <Switch>
+    {/* <Route path="/dashboard" component={DashBoardIdx} /> */}
+    <Route path="/" component={DashBoard} />
+    <Route path="/accesslog" component={AccessLog} />
+    <Route path="/dlaccesslog" component={DlAccessLog} />
+    <Route path="/adminlist" component={AdminList} />
+    <Route path="/kiosk" component={Kiosk} />
+    </Switch>
+  );
 
-}
-export default DashboardRoute;
+};

@@ -11,5 +11,12 @@ export const Viewer = styled.div`
   align-items: center;
 
 `;
+export const Title = styled.div`
+  width: 100%
+  height: 50px;
 
-export default Viewer;
+  margin: 0 0 20px 0;
+
+  font-size: 25px;
+  font-weight: 600;
+`;

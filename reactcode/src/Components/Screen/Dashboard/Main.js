@@ -1,41 +1,14 @@
-import React, { useState } from 'react';
-import {DashBoardIdx,AccessLog,DlAccessLog,AdminList,Kiosk} from './DashboardIdx';
-// accesslog 
-// dlaccesslog
-// adminlist
-// kiosk => 이부분은 따로 개발중
+import React from 'react';
 
-export const Dashboard = () => {
-  const [dashboardClickView,setDashboardClickView] = useState("")
-  
+import GlobalStyle from '../../Screen/Share/StConstant';
+
+const Main = () => {
   return (
     <>
-      {dashboardClickView === "" ? (
-        <DashBoardIdx setDashboardClickView={setDashboardClickView}/>
-      ):(
-        false
-      )}
-      {dashboardClickView === "accesslog" ? (
-        <AccessLog setDashboardClickView={setDashboardClickView}/>
-      ):(
-        false
-      )}
-      {dashboardClickView === "dlaccesslog" ? (
-        <DlAccessLog setDashboardClickView={setDashboardClickView}/>
-      ):(
-        false
-      )}
-      {dashboardClickView === "adminlist" ? (
-        <AdminList setDashboardClickView={setDashboardClickView}/>
-      ):(
-        false
-      )}
-      {dashboardClickView === "kiosk" ? (
-        <Kiosk setDashboardClickView={setDashboardClickView}/>
-      ):(
-        false
-      )}
-      
+      <GlobalStyle />
+      'dash board 이며,'
     </>
   );
 };
+
+export default Main;
