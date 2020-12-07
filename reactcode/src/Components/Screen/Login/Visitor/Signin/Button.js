@@ -1,6 +1,6 @@
 import React from "react";
 import { setUserToken } from "../../../../../Auth/Token";
-import {PhoneCertifyButtonViewer,LoginButtonViewer,BackButtonViewer} from './Resource/Style/StButton'
+import {CertifyPhoneButtonViewer,LoginButtonViewer,BackButtonViewer} from './Resource/Style/StButton'
 
 export const onVistiorLogin=(phone,name,major)=>{
     console.log(phone,name,major);
@@ -11,10 +11,10 @@ export const onVistiorLogin=(phone,name,major)=>{
     setUserToken('Test');
     window.location.reload();
 }
-export const onPhoneCertify=()=>{
+export const onCertifyPhone=()=>{
     console.log("핸드폰으로 인증번호를 전송하였습니다. 인증번호를 확인해주세요.")
 }
-export const PhoneCertifyButton = ({ onClick }) => <PhoneCertifyButtonViewer onClick={onClick}>인증번호 전송</PhoneCertifyButtonViewer>;
+export const CertifyPhoneButton = ({ onClick }) => <CertifyPhoneButtonViewer onClick={onClick}>인증번호 전송</CertifyPhoneButtonViewer>;
 export const LoginButton = ({ onClick }) => <LoginButtonViewer onClick={onClick}>로그인하기</LoginButtonViewer>;
 export const BackButton = ({onClick}) => <BackButtonViewer onClick={onClick}>뒤로가기</BackButtonViewer>;
 

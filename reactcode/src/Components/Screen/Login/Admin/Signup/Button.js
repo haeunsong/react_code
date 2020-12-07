@@ -1,5 +1,5 @@
 import React from "react";
-import {SignupButtonViewer,EmailCertifyButtonViewer} from './Resource/Style/StButton';
+import {SignupButtonViewer,EmailCertifyButtonViewer,BackButtonViewer} from './Resource/Style/StButton';
 
 export const onSignup=(id,password)=>{
     console.log(id,password);
@@ -16,3 +16,4 @@ export const SignupButton = ({ onClick }) => (
 export const EmailCertifyButton = ({ onClick }) => (
     <EmailCertifyButtonViewer onClick={onClick}>인증메일 전송</EmailCertifyButtonViewer>
 )
+export const BackButton = ({onClick}) => <BackButtonViewer onClick={onClick}>뒤로가기</BackButtonViewer>;

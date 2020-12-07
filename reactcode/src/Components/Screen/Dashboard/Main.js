@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <>
       <GlobalStyle />
-      'dash board 이며,'
+      여기에 QR코드 ..?
     </>
   );
 };

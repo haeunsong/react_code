@@ -5,10 +5,11 @@ import {getUserToken} from '../../../Auth/Token';
 const Main=()=>{
   return (
     <BrowserRouter>
+
       {getUserToken() ? <DashboardRoute /> : <LoginRoute />}
+      
     </BrowserRouter>
 
   )
-
 }
 export default Main;

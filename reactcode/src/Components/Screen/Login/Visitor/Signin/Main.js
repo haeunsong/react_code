@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { onPhoneCertify, onVistiorLogin, LoginButton, PhoneCertifyButton, BackButton } from './Button';
+import { onCertifyPhone, onVistiorLogin, LoginButton, CertifyPhoneButton, BackButton } from './Button';
 import { useInput, Input } from './Input';
 import { Viewer, Title } from './Resource/Style/StMain';
 
@@ -17,9 +17,9 @@ const Main = ({ setClickView }) => {
   const nameUseInput = useInput("이름:");
   const majorUseInput = useInput("학과(학부):");
 
-  const onPhoneCertifyClick = () => {
+  const onCertifyPhoneClick = () => {
     // 휴대폰으로 인증번호 전송
-    onPhoneCertify();
+    onCertifyPhone();
   };
   const onLoginClick = () => {
     onVistiorLogin(
@@ -36,7 +36,7 @@ const Main = ({ setClickView }) => {
     <Viewer>
       <Title>방문자 로그인</Title>
       <Input type="text" {...phoneUseInput} />
-      <PhoneCertifyButton onClick={onPhoneCertifyClick} />
+      <CertifyPhoneButton onClick={onCertifyPhoneClick} />
       <Input type="text" {...certifyNumUseInput} />
       <Input type="text" {...nameUseInput} />
       <Input type="text" {...majorUseInput} />

@@ -6,9 +6,10 @@ import {
   EmailCertifyButton,
   onSignup,
   onEmailCertify,
+  BackButton
 } from "./Button";
 import { useInput, Input } from "./Input";
-import { Viewer } from "./Resource/Style/StMain";
+import { Viewer,Title } from "./Resource/Style/StMain";
 
 // admin/signup
 const Main = ({ setClickView }) => {
@@ -20,13 +21,16 @@ const Main = ({ setClickView }) => {
   const checkUserPwUseInput = useInput("PW 확인:");
 
   const onEmailCertifyClick = () => {
-    // 이메일로 인증링크 보냄. 서버랑 연결..?
+    // 이메일로 인증링크 보냄. 
     onEmailCertify();
   };
-  const onSignupClick = () => {
-    onSignup(userIdUseInput.value, userPwUseInput.value);
+  const onBackClick = () => {
     setClickView("adminLoginView")
-  };
+  }
+  // const onSignupClick = () => {
+  //   onSignup(userIdUseInput.value, userPwUseInput.value);
+  //   setClickView("adminLoginView")
+  // };
   // useInput이 반환하는 것: placeholder,value,onChange
   // 학내메일로 인증 후 별도의 ID,비번으로 가입.
   // 기기에 ID,비번 저장해서 두번째부터는 바로 로그인.
@@ -44,12 +48,8 @@ const Main = ({ setClickView }) => {
       <Input type="password" {...userPwUseInput} />
       <Input type="password" {...checkUserPwUseInput} />
 
-      <Link to="/admin/login">
-        {/*가입하기 버튼 누르면 다시 로그인하라는 창 띄우고 로그인페이지로*/}
-        {/* <SignupButton onClick={onSignupClick}></SignupButton> */}
-        <SignupButton onClick={()=>setClickView("adminLoginView")}></SignupButton>
-        {/* <button onClick={() => setClickView("adminLoginView")}>가입하기</button> */}
-      </Link>
+      <SignupButton onClick={()=>setClickView("adminLoginView")}></SignupButton>
+      <BackButton onClick={onBackClick} />
     </Viewer>
   );
 };

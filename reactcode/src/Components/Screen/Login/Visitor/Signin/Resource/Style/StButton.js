@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PhoneCertifyButtonViewer = styled.button`
+export const CertifyPhoneButtonViewer = styled.button`
   width: 250px;
   height: 40px;
 
@@ -37,4 +37,3 @@ export const BackButtonViewer = styled.button`
   margin: 20px 0 0 0;
 `;
 
-export default PhoneCertifyButtonViewer;
