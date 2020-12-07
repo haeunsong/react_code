@@ -15,7 +15,7 @@ text-align: center;
 }
 `;
 
-export const EmailCertifyButtonViewer = styled.button`
+export const CertifyEmailButtonViewer = styled.button`
 width: 250px;
 height: 40px;
 

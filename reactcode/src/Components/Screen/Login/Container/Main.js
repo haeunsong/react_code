@@ -12,9 +12,8 @@ export const Choice = () => {
 
   const onAdminButtonClick = () => {
     setClickView('adminSigninView');
-    
-    return clickView === 'adminSigninView' ? <AdminSignin setClickView={setClickView} /> : false
 
+    return clickView === 'adminSigninView' ? <AdminSignin setClickView={setClickView} /> : false
 
   }
 

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import {
   SignupButton,
-  EmailCertifyButton,
+  CertifyEmailButton,
   onSignup,
-  onEmailCertify,
+  onCertifyEmail,
   BackButton
 } from "./Button";
 import { useInput, Input } from "./Input";
@@ -20,9 +20,9 @@ const Main = ({ setClickView }) => {
   const userPwUseInput = useInput("사용할 PW 입력:");
   const checkUserPwUseInput = useInput("PW 확인:");
 
-  const onEmailCertifyClick = () => {
+  const onCertifyEmailClick = () => {
     // 이메일로 인증링크 보냄. 
-    onEmailCertify();
+    onCertifyEmail();
   };
   const onBackClick = () => {
     setClickView("adminLoginView")
@@ -39,7 +39,7 @@ const Main = ({ setClickView }) => {
       <h1>건물 관리자 회원가입</h1>
       <Input type="email" {...emailUseInput} />
 
-      <EmailCertifyButton onClick={onEmailCertifyClick} />
+      <CertifyEmailButton onClick={onCertifyEmailClick} />
 
       <Input type="text" {...nameUseInput} />
       <Input type="text" {...majorUseInput} />
