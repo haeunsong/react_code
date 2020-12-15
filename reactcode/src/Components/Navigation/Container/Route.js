@@ -1,7 +1,7 @@
 import React from "react";
 import { Route,Switch } from "react-router";
 
-import {Choice} from '../../Screen/Login/Container/Main';
+import Login from '../../Screen/Login/Container/Main';
 import DashBoard from '../../Screen/Dashboard/Main';
 import AccessLog from '../../Screen/Dashboard/AccessLog';
 import DlAccessLog from '../../Screen/Dashboard/DlAccessLog';
@@ -9,7 +9,7 @@ import AdminList from '../../Screen/Dashboard/AdminList';
 import Kiosk from '../../Screen/Dashboard/Kiosk';
 
 export const LoginRoute = () => {
-  return <Choice />;
+  return <Login />;
 };
 export const DashboardRoute=()=>{
   return (

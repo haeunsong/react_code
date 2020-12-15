@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Viewer = styled.div`
+const Viewer = styled.div`
 
   width: 100vw;
   height: 100vh;

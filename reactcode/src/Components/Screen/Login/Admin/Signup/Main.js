@@ -27,10 +27,7 @@ const Main = ({ setClickView }) => {
   const onBackClick = () => {
     setClickView("adminLoginView")
   }
-  // const onSignupClick = () => {
-  //   onSignup(userIdUseInput.value, userPwUseInput.value);
-  //   setClickView("adminLoginView")
-  // };
+
   // useInput이 반환하는 것: placeholder,value,onChange
   // 학내메일로 인증 후 별도의 ID,비번으로 가입.
   // 기기에 ID,비번 저장해서 두번째부터는 바로 로그인.
@@ -48,8 +45,9 @@ const Main = ({ setClickView }) => {
       <Input type="password" {...userPwUseInput} />
       <Input type="password" {...checkUserPwUseInput} />
 
+
       <SignupButton onClick={()=>setClickView("adminLoginView")}></SignupButton>
-      <BackButton onClick={onBackClick} />
+      <BackButton onClick={()=>setClickView("adminLoginView")} />
     </Viewer>
   );
 };
