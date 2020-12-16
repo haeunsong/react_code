@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { onCertifyPhone, onVistiorLogin, LoginButton, CertifyPhoneButton, BackButton } from './Button';
-import { useInput, Input } from './Input';
-import { Viewer, Title } from './Resource/Style/StMain';
+import { onCertifyPhone, onVistiorLogin, LoginButton, CertifyPhoneButton, BackButton } from '../../Button';
+import { useInput, Input } from '../../Input';
+import { Viewer, Title } from '../../Resource/Style/StMain';
 
-// visitor/login
+// visitor/signup
 // 방문자 휴대전화 번호 인증 화면(방문자 로그인)
 // 학생/교직원/교수 등등
 // 전화번호로 인증하면 자동으로 사용자 생성 및 인증토큰 발급
@@ -28,20 +28,17 @@ const Main = ({ setClickView }) => {
       majorUseInput.value
     );
   };
-  const onBackClick = () => {
-    setClickView('');
-  };
 
   return (
     <Viewer>
-      <Title>방문자 로그인</Title>
+      <Title>방문자 가입</Title>
       <Input type="text" {...phoneUseInput} />
       <CertifyPhoneButton onClick={onCertifyPhoneClick} />
       <Input type="text" {...certifyNumUseInput} />
       <Input type="text" {...nameUseInput} />
       <Input type="text" {...majorUseInput} />
       <LoginButton onClick={onLoginClick} />
-      <BackButton onClick={onBackClick} />
+      <BackButton onClick={()=>setClickView('homeView')} />
     </Viewer>
   );
 };

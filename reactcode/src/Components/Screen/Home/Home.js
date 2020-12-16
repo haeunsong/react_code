@@ -2,13 +2,13 @@ import React from 'react';
 import {ChooseAdminButton,ChooseVisitorButton} from './Button';
 import Viewer from './Resource/Style/StMain';
 
-const Choice=({setClickView}) => {
+const Home=({setClickView}) => {
   return (
     <Viewer>
       <ChooseAdminButton onClick={() => setClickView('adminSigninView')} />
-      <ChooseVisitorButton onClick={() => setClickView('visitorSigninView')} />
+      <ChooseVisitorButton onClick={() => setClickView('visitorSignupView')} />
     </Viewer>
   );
 };
 
-export default Choice;
+export default Home;

@@ -1,5 +1,5 @@
 import React from "react";
-import { setUserToken } from "../../../../../Auth/Token";
+import { setUserToken } from "../../../Auth/Token";
 import {CertifyPhoneButtonViewer,LoginButtonViewer,BackButtonViewer} from './Resource/Style/StButton'
 
 export const onVistiorLogin=(phone,name,major)=>{
