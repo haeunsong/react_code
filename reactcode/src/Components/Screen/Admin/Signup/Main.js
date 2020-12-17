@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import {
-  SignupButton,
+  AdminSignupButton,
   CertifyEmailButton,
-  onSignup,
   onCertifyEmail,
   BackButton
 } from "./Button";
@@ -24,31 +22,28 @@ const Main = ({ setClickView }) => {
     // 이메일로 인증링크 보냄. 
     onCertifyEmail();
   };
-  const onBackClick = () => {
-    setClickView("adminLoginView")
-  }
 
   // useInput이 반환하는 것: placeholder,value,onChange
   // 학내메일로 인증 후 별도의 ID,비번으로 가입.
   // 기기에 ID,비번 저장해서 두번째부터는 바로 로그인.
   return (
+    <>
     <Viewer>
-      <h1>건물 관리자 회원가입</h1>
+      <Title>건물 관리자 회원가입</Title>
       <Input type="email" {...emailUseInput} />
-
       <CertifyEmailButton onClick={onCertifyEmailClick} />
-
       <Input type="text" {...nameUseInput} />
       <Input type="text" {...majorUseInput} />
-
       <Input type="text" {...userIdUseInput} />
       <Input type="password" {...userPwUseInput} />
       <Input type="password" {...checkUserPwUseInput} />
-
-
-      <SignupButton onClick={()=>setClickView("adminLoginView")}></SignupButton>
-      <BackButton onClick={()=>setClickView("adminLoginView")} />
+      <AdminSignupButton onClick={()=>{
+        setClickView("adminSigninView")
+        alert('회원가입이 완료되었습니다. 다시 로그인해주세요.');
+      }} />
+      <BackButton onClick={()=>setClickView("adminSigninView")} />
     </Viewer>
+    </>
   );
 };
 

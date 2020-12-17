@@ -3,7 +3,6 @@ import { setUserToken } from "../../../../Auth/Token";
 import {
   CertifyPhoneButtonViewer,
   LoginButtonViewer,
-  BackButtonViewer,
   MoveToSignupButtonViewer
 } from "./Resource/Style/StButton";
 
@@ -27,9 +26,7 @@ export const CertifyPhoneButton = ({ onClick }) => (
 export const LoginButton = ({ onClick }) => (
   <LoginButtonViewer onClick={onClick}>로그인하기</LoginButtonViewer>
 );
-export const BackButton = ({ onClick }) => (
-  <BackButtonViewer onClick={onClick}>뒤로가기</BackButtonViewer>
-);
+
 export const MoveToSignupButton = ({onClick}) => (
   <MoveToSignupButtonViewer onClick={onClick}>회원가입</MoveToSignupButtonViewer>
 );

@@ -20,7 +20,7 @@ export const InputStyle = makeStyles ({
         width: 400,
         fontSize: 14,
         padding: '0 30px',
-        marginBottom: 5,
+        margin: 0,
     },
 
 })

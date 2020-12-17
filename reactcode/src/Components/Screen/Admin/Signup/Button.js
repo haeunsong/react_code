@@ -1,5 +1,5 @@
 import React from "react";
-import {SignupButtonViewer,CertifyEmailButtonViewer,BackButtonViewer} from './Resource/Style/StButton';
+import {AdminSignupButtonViewer,CertifyEmailButtonViewer,BackButtonViewer} from './Resource/Style/StButton';
 
 export const onSignup=(id,password)=>{
     console.log(id,password);
@@ -7,8 +7,8 @@ export const onSignup=(id,password)=>{
 export const onCertifyEmail=()=>{
     console.log("이메일로 인증링크를 전송하였습니다. 이메일을 확인해주세요.")
 }
-export const SignupButton = ({ onClick }) => (
-    <SignupButtonViewer onClick={onClick}>가입하기</SignupButtonViewer>
+export const AdminSignupButton = ({ onClick }) => (
+    <AdminSignupButtonViewer onClick={onClick}>가입하기</AdminSignupButtonViewer>
 );
 
 // 누르면 이메일로 인증코드. 누르면 전화번호로 인증번호

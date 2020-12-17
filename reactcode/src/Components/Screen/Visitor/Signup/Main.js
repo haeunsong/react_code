@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { onCertifyPhone, onVistiorLogin, LoginButton, CertifyPhoneButton, BackButton ,VisitorSignupButton} from './Button';
+import { onCertifyPhone , CertifyPhoneButton, BackButton ,VisitorSignupButton} from './Button';
 import { useInput, Input } from './Input';
 import { Viewer, Title } from './Resource/Style/StMain';
 
@@ -21,17 +21,10 @@ const Main = ({ setClickView }) => {
     // 휴대폰으로 인증번호 전송
     onCertifyPhone();
   };
-  const onLoginClick = () => {
-    onVistiorLogin(
-      phoneUseInput.value,
-      nameUseInput.value,
-      majorUseInput.value
-    );
-  };
 
   return (
     <Viewer>
-      <Title>방문자 가입</Title>
+      <Title>방문자 회원가입</Title>
       <Input type="text" {...phoneUseInput} />
       <CertifyPhoneButton onClick={onCertifyPhoneClick} />
       <Input type="text" {...certifyNumUseInput} />

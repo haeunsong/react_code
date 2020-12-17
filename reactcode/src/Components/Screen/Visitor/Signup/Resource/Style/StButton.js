@@ -6,53 +6,54 @@ import { makeStyles } from "@material-ui/core/styles"; // styles 기능 추가
 import Button from "@material-ui/core/Button";
 
 const ButtonStyle = makeStyles({
-  login:{
-      background: '#dcdde1',
-      border: 0,
-      borderRadius: 3,
-      boxShadow: '0',
-      color: 'black',
-      height: 40,
-      width: 250,
-      fontSize:14,
-      padding: '0 30px',
-      marginBottom:5,
-  },
 
   signup:{
-    background: '#dcdde1',
+    backgroundColor: '#8cc8e6',
+    '&:hover':{
+      background: '#0d71a3',
+      color:'#ffffff'
+    },
     border: 0,
     borderRadius: 3,
     boxShadow: '0',
     color: 'black',
-    height: 30,
-    width: 150,
-    fontSize:12,
+    height: 40,
+    width: 340,
+    fontSize:14,
     padding: '0 30px',
     marginBottom:5,
   },
 
   back:{
-    background: '#dcdde1',
+    backgroundColor: '#8cc8e6',
+    '&:hover':{
+      background: '#0d71a3',
+      color:'#ffffff'
+    },
     border: 0,
     borderRadius: 3,
     boxShadow: '0',
     color: 'black',
-    height: 30,
-    width: 150,
-    fontSize:12,
+    height: 40,
+    width: 340,
+    fontSize:14,
     padding: '0 30px',
   },
+
   certifyPhone:{
-    background: '#dcdde1',
+    backgroundColor: '#8cc8e6',
+    '&:hover':{
+      background: '#0d71a3',
+      color:'#ffffff'
+    },
       border: 0,
       borderRadius: 3,
       boxShadow: '0',
       color: 'black',
       height: 40,
-      width: 250,
+      width: 340,
       fontSize:14,
-      padding: '0 30px',
+      padding: '0',
       marginBottom:5,
   }
 
@@ -60,14 +61,14 @@ const ButtonStyle = makeStyles({
 })
 
 
-export const LoginButtonViewer = ({onClick}) =>{
-  const classes = ButtonStyle();
-  return <Button onClick={onClick} variant="contained" className={classes.login}>로그인하기</Button>;
-}
-export const MoveToSignupButtonViewer = ({onClick}) =>{
-  const classes = ButtonStyle();
-  return <Button onClick={onClick} variant="contained" className={classes.signup}>회원가입</Button>;
-}
+// export const LoginButtonViewer = ({onClick}) =>{
+//   const classes = ButtonStyle();
+//   return <Button onClick={onClick} variant="contained" className={classes.login}>로그인하기</Button>;
+// }
+// export const MoveToSignupButtonViewer = ({onClick}) =>{
+//   const classes = ButtonStyle();
+//   return <Button onClick={onClick} variant="contained" className={classes.signup}>회원가입</Button>;
+// }
 export const BackButtonViewer = ({onClick}) => {
   const classes = ButtonStyle();
   return <Button onClick={onClick} variant="contained" className={classes.back}>뒤로가기</Button>;
@@ -79,7 +80,7 @@ export const CertifyPhoneButtonViewer = ({onClick}) => {
 }
 export const VisitorSignupButtonViewer = ({onClick}) => {
   const classes = ButtonStyle();
-  return <Button onClick={onClick} variant="contained" className={classes.login}>회원가입완료</Button>;
+  return <Button onClick={onClick} variant="contained" className={classes.signup}>회원가입 완료</Button>;
 
 }
 // export const LoginButtonViewer = styled.button`

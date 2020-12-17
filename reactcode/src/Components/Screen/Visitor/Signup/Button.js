@@ -2,7 +2,6 @@ import React from "react";
 import { setUserToken } from "../Auth/Main";
 import {
   CertifyPhoneButtonViewer,
-  LoginButtonViewer,
   BackButtonViewer,
   VisitorSignupButtonViewer
 } from "./Resource/Style/StButton";
@@ -24,9 +23,7 @@ export const CertifyPhoneButton = ({ onClick }) => (
     인증번호 전송
   </CertifyPhoneButtonViewer>
 );
-export const LoginButton = ({ onClick }) => (
-  <LoginButtonViewer onClick={onClick}>로그인하기</LoginButtonViewer>
-);
+
 export const BackButton = ({ onClick }) => (
   <BackButtonViewer onClick={onClick}>뒤로가기</BackButtonViewer>
 );

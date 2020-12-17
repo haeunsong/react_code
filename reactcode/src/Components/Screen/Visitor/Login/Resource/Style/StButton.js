@@ -1,56 +1,57 @@
 import styled from "styled-components";
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles"; // styles 기능 추가
 import Button from "@material-ui/core/Button";
+import { palette } from '@material-ui/system';
 
 const ButtonStyle = makeStyles({
   login:{
-      background: '#dcdde1',
+    backgroundColor: '#8cc8e6',
+    '&:hover':{
+      background: '#0d71a3',
+      color:'#ffffff'
+    },
       border: 0,
       borderRadius: 3,
       boxShadow: '0',
       color: 'black',
       height: 40,
-      width: 250,
+      width: 340,
       fontSize:14,
       padding: '0 30px',
       marginBottom:5,
   },
 
   signup:{
-    background: '#dcdde1',
+    backgroundColor: '#8cc8e6',
+    '&:hover':{
+      background: '#0d71a3',
+      color:'#ffffff'
+    },
     border: 0,
     borderRadius: 3,
     boxShadow: '0',
     color: 'black',
-    height: 30,
-    width: 150,
-    fontSize:12,
+    height: 40,
+    width: 340,
+    fontSize:14,
     padding: '0 30px',
     marginBottom:5,
   },
 
-  back:{
-    background: '#dcdde1',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0',
-    color: 'black',
-    height: 30,
-    width: 150,
-    fontSize:12,
-    padding: '0 30px',
-  },
   certifyPhone:{
-    background: '#dcdde1',
+    backgroundColor: '#8cc8e6',
+    '&:hover':{
+      background: '#0d71a3',
+      color:'#ffffff'
+    },
       border: 0,
       borderRadius: 3,
       boxShadow: '0',
       color: 'black',
       height: 40,
-      width: 250,
+      width: 340,
       fontSize:14,
       padding: '0 30px',
       marginBottom:5,
@@ -68,10 +69,7 @@ export const MoveToSignupButtonViewer = ({onClick}) =>{
   const classes = ButtonStyle();
   return <Button onClick={onClick} variant="contained" className={classes.signup}>회원가입</Button>;
 }
-export const BackButtonViewer = ({onClick}) => {
-  const classes = ButtonStyle();
-  return <Button onClick={onClick} variant="contained" className={classes.back}>뒤로가기</Button>;
-}
+
 export const CertifyPhoneButtonViewer = ({onClick}) => {
   const classes = ButtonStyle();
   return <Button onClick={onClick} variant="contained" className={classes.certifyPhone}>인증하기</Button>;

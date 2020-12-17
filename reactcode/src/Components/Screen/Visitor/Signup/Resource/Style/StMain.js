@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { makeStyles } from "@material-ui/core/styles"; // styles 기능 추가
+
 
 export const Viewer = styled.div`
   width: 100vw;
