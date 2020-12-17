@@ -1,5 +1,6 @@
-import React from 'react';
-import Navigation from "../Components/Navigation/Container/Main";
+import React from "react";
+
+import Navigation from "../Components/Navigation/Main";
 
 const Main = () => {
   return <Navigation />;

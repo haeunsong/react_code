@@ -24,7 +24,7 @@ const Main = ({setClickView}) => {
       <Input type="password" {...passwordUseInput} />
       <LoginButton onClick={onLoginClick} />
       <MoveToSignupButton onClick={() => setClickView("adminSignupView")}></MoveToSignupButton>
-      <BackButton onClick={()=>setClickView('homeView')} />
+      {/* <BackButton onClick={()=>setClickView('homeView')} /> */}
 
     </Viewer>
   );
