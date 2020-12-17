@@ -17,7 +17,7 @@ export const onVistiorLogin = (phone, name, major) => {
   window.location.reload();
 };
 export const onCertifyPhone = () => {
-  console.log("핸드폰으로 인증번호를 전송하였습니다. 인증번호를 확인해주세요.");
+  alert("핸드폰으로 인증번호를 전송하였습니다. 인증번호를 확인해주세요.");
 };
 export const CertifyPhoneButton = ({ onClick }) => (
   <CertifyPhoneButtonViewer onClick={onClick}>
