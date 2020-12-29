@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 import styled from "styled-components";
 
 // export const ViewerStyle = makeStyles({
@@ -16,7 +16,7 @@ import styled from "styled-components";
 
 // export const Viewer = () => {
 //   const classes = ViewerStyle();
-//   return <div className={classes.viewer} />
+//   return <Box className={classes.viewer}></Box>
 // }
 export const Viewer = styled.div`
 

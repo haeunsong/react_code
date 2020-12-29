@@ -5,6 +5,7 @@ import Checkin from "../Checkin/Main";
 import { getUserToken } from "../Auth/Main";
 
 const Main = () => {
+
   return <>{getUserToken() ? <Checkin /> : <Login />}</>;
 };
 

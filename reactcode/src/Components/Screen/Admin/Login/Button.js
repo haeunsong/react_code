@@ -14,5 +14,6 @@ export const LoginButton = ({ onClick }) => (
 
 export const onAdminLogin = (email, password) => {
   console.log(email, password);
+  
   // ajax 서버로 보내는 통신
 };

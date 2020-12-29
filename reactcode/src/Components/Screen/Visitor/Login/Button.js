@@ -1,5 +1,6 @@
 import React from "react";
 import { setUserToken } from "../../../../Auth/Token";
+import { ACCESS_TOKEN } from "../Auth/Main";
 import {
   CertifyPhoneButtonViewer,
   LoginButtonViewer,
@@ -12,7 +13,7 @@ export const onVistiorLogin = (phone, name, major) => {
   // fetch로 서버 URL 넣어서 가져오면됨
   // 가져온 토큰을
 
-  setUserToken("Test");
+  setUserToken(ACCESS_TOKEN);
   window.location.reload();
 };
 export const onCertifyPhone = () => {

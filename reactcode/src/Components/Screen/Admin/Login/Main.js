@@ -15,7 +15,6 @@ const Main = ({setClickView}) => {
     onAdminLogin(emailUseInput.value, passwordUseInput.value);
   };
 
-
   // useInput이 반환하는 것: placeholder,value,onChange
   return (
     <Viewer>
@@ -24,8 +23,6 @@ const Main = ({setClickView}) => {
       <Input type="password" {...passwordUseInput} />
       <LoginButton onClick={onLoginClick} />
       <MoveToSignupButton onClick={() => setClickView("adminSignupView")}></MoveToSignupButton>
-      {/* <BackButton onClick={()=>setClickView('homeView')} /> */}
-
     </Viewer>
   );
 };
