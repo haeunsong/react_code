@@ -26,7 +26,7 @@ export const InputStyle = makeStyles ({
     },
 
 })
-export const InputViewer = ({ onChange, placeholder, type, value }) => {
+export const InputViewer = ({ onChange, placeholder, type, value,name}) => {
     const classes = InputStyle();
     return (
         <form className={classes.container}>
@@ -37,6 +37,7 @@ export const InputViewer = ({ onChange, placeholder, type, value }) => {
                 type={type}
                 className={classes.textField}
                 variant="outlined"
+                name={name}
             />
         </form>
 

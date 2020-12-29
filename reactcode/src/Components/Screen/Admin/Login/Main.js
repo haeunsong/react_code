@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-
+import {authService} from "../../../../fbase";
 import { MoveToSignupButton, LoginButton } from "./Button";
-import { onAdminLogin } from "./Button";
 import { useInput, Input } from "./Input";
-import { Viewer,Title } from "./Resource/Style/StMain";
-import { BackButton } from "./Button";
+import { Viewer, Title } from "./Resource/Style/StMain";
 
-const Main = ({setClickView}) => {
+const Main = ({ setClickView }) => {
   const emailUseInput = useInput("학내메일로 로그인(@office.skhu.ac.kr):");
   const passwordUseInput = useInput("비밀번호를 입력하세요:");
+  const [error,setError] = useState("");
 
+  const onAdminLogin =  async(email, password) => {
+    // e.preventDefault();
+    try {
+      let data;
+      data = await authService.signInWithEmailAndPassword(email, password);
+
+      console.log(data);
+    } catch (error) {
+      setError(error.message);
+      console.log(error);
+    }
+  };
   const onLoginClick = () => {
+    console.log(emailUseInput.value, passwordUseInput.value);
     onAdminLogin(emailUseInput.value, passwordUseInput.value);
   };
 
@@ -19,9 +31,10 @@ const Main = ({setClickView}) => {
   return (
     <Viewer>
       <Title>건물 관리자 로그인</Title>
-      <Input type="email" {...emailUseInput} />
-      <Input type="password" {...passwordUseInput} />
-      <LoginButton onClick={onLoginClick} />
+        <Input type="text" name="email" required value={emailUseInput.value} {...emailUseInput} />
+        <Input type="password" name="password" required value={passwordUseInput.value} {...passwordUseInput} />
+        <LoginButton onClick={onLoginClick}/>
+
       <MoveToSignupButton onClick={() => setClickView("adminSignupView")}></MoveToSignupButton>
     </Viewer>
   );

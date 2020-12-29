@@ -3,7 +3,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles"; // styles 기능 추가
 import Button from "@material-ui/core/Button";
-import { palette } from '@material-ui/system';
 
 const ButtonStyle = makeStyles({
   login:{

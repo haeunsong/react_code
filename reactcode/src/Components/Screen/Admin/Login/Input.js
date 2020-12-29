@@ -11,11 +11,12 @@ export const useInput = (prefill) => {
 };
 
 // 중괄호가 없으면 순서대로 받기때문에 중괄호를 써서 매칭을 해준다.
-export const Input = ({ onChange, placeholder, type, value }) => (
+export const Input = ({ onChange, placeholder, type, value, name}) => (
   <InputViewer
-    defaultValue={value}
+    value={value}
     onChange={onChange}
     placeholder={placeholder}
     type={type}
+    name={name}
   />
 );
