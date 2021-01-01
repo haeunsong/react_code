@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Login from "../Main";
-import { getUserToken } from "../Auth/Main";
-import Dashboard from "../Dashboard/Main";
 import {authService} from "../../../../fbase";
-import AppRouter from "./Router";
+import ContainerRouter from "./Router";
 
 const Main = () => {
   const [init,setInit] = useState(false);
@@ -26,11 +23,11 @@ const Main = () => {
 
   return (
     <>
-    {init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing.."};
+    
+    {init ? <ContainerRouter isLoggedIn={isLoggedIn} /> : "Initializing.."};
     
 
 
-  
   
     </>
   )
