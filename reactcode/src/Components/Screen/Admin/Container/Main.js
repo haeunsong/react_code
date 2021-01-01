@@ -23,12 +23,7 @@ const Main = () => {
 
   return (
     <>
-    
     {init ? <ContainerRouter isLoggedIn={isLoggedIn} /> : "Initializing.."};
-    
-
-
-  
     </>
   )
 };

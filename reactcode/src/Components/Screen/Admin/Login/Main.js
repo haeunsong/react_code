@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Link} from "react-router-dom";
 import {authService} from "../../../../fbase";
 import { MoveToSignupButton, LoginButton } from "./Button";
 import { useInput, Input } from "./Input";
@@ -15,11 +15,10 @@ const Main = ({ setClickView }) => {
     try {
       let data;
       data = await authService.signInWithEmailAndPassword(email, password);
-
       console.log(data);
     } catch (error) {
       setError(error.message);
-      console.log(error);
+      alert(error);
     }
   };
   const onLoginClick = () => {
@@ -35,7 +34,10 @@ const Main = ({ setClickView }) => {
         <Input type="password" name="password" required value={passwordUseInput.value} {...passwordUseInput} />
         <LoginButton onClick={onLoginClick}/>
 
-      <MoveToSignupButton onClick={() => setClickView("adminSignupView")}></MoveToSignupButton>
+      <Link to="/admin/signup" style={{textDecoration:'none'}}>
+      <MoveToSignupButton></MoveToSignupButton>
+      </Link>    
+
     </Viewer>
   );
 };

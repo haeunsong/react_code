@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 import {
   AdminSignupButton,
   CertifyEmailButton,
@@ -8,7 +8,6 @@ import {
 } from "./Button";
 import { useInput, Input } from "./Input";
 import { Viewer,Title } from "./Resource/Style/StMain";
-
 // admin/signup
 const Main = ({ setClickView }) => {
   const emailUseInput = useInput("학내메일로 가입(***@office.skhu.ac.kr):");
@@ -37,11 +36,13 @@ const Main = ({ setClickView }) => {
       <Input type="text" {...userIdUseInput} />
       <Input type="password" {...userPwUseInput} />
       <Input type="password" {...checkUserPwUseInput} />
+
+      <Link to="/admin/login" style={{textDecoration:'none', display:'grid'}}>
       <AdminSignupButton onClick={()=>{
-        setClickView("adminSigninView")
         alert('회원가입이 완료되었습니다. 다시 로그인해주세요.');
       }} />
-      <BackButton onClick={()=>setClickView("adminSigninView")} />
+      <BackButton />
+      </Link>
     </Viewer>
     </>
   );
