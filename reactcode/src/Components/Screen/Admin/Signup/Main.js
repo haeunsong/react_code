@@ -17,10 +17,18 @@ const Main = ({ setClickView }) => {
   const userPwUseInput = useInput("사용할 PW 입력:");
   const checkUserPwUseInput = useInput("PW 확인:");
 
+  const onAdminSignup = () => {
+    alert('회원가입이 완료되었습니다. 다시 로그인해주세요.');
+
+  }
   const onCertifyEmailClick = () => {
     // 이메일로 인증링크 보냄. 
     onCertifyEmail();
   };
+  const onAdminSignupClick = () => {
+    onAdminSignup(emailUseInput.value,nameUseInput.value,majorUseInput.value,
+      userIdUseInput.value,userPwUseInput.value);
+  }
 
   // useInput이 반환하는 것: placeholder,value,onChange
   // 학내메일로 인증 후 별도의 ID,비번으로 가입.
@@ -38,9 +46,7 @@ const Main = ({ setClickView }) => {
       <Input type="password" {...checkUserPwUseInput} />
 
       <Link to="/admin/login" style={{textDecoration:'none', display:'grid'}}>
-      <AdminSignupButton onClick={()=>{
-        alert('회원가입이 완료되었습니다. 다시 로그인해주세요.');
-      }} />
+      <AdminSignupButton onClick={onAdminSignupClick} />
       <BackButton />
       </Link>
     </Viewer>

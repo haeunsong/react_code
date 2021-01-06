@@ -5,7 +5,7 @@ export const onSignup=(id,password)=>{
     console.log(id,password);
 }
 export const onCertifyEmail=()=>{
-    console.log("이메일로 인증링크를 전송하였습니다. 이메일을 확인해주세요.")
+    alert("이메일로 인증링크를 전송하였습니다. 이메일을 확인해주세요.")
 }
 export const AdminSignupButton = ({ onClick }) => (
     <AdminSignupButtonViewer onClick={onClick}>가입하기</AdminSignupButtonViewer>

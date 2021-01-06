@@ -21,7 +21,7 @@ const Main = ({ setClickView }) => {
       alert(error);
     }
   };
-  const onLoginClick = () => {
+  const onAdminLoginClick = () => {
     console.log(emailUseInput.value, passwordUseInput.value);
     onAdminLogin(emailUseInput.value, passwordUseInput.value);
   };
@@ -32,7 +32,7 @@ const Main = ({ setClickView }) => {
       <Title>건물 관리자 로그인</Title>
         <Input type="text" name="email" required value={emailUseInput.value} {...emailUseInput} />
         <Input type="password" name="password" required value={passwordUseInput.value} {...passwordUseInput} />
-        <LoginButton onClick={onLoginClick}/>
+        <LoginButton onClick={onAdminLoginClick}/>
 
       <Link to="/admin/signup" style={{textDecoration:'none'}}>
       <MoveToSignupButton></MoveToSignupButton>
