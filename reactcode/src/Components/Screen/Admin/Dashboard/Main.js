@@ -18,6 +18,7 @@ const Main = () => {
 
       }catch(e) {
         setError(e);
+        console.log(e);
       }
       setLoading(false);
     };

@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import {
   AdminSignupButton,
   CertifyEmailButton,
-  onCertifyEmail,
   BackButton
 } from "./Button";
 import { useInput, Input } from "./Input";
@@ -17,6 +16,11 @@ const Main = ({ setClickView }) => {
   const userPwUseInput = useInput("사용할 PW 입력:");
   const checkUserPwUseInput = useInput("PW 확인:");
 
+  const onCertifyEmail = async(email,userName,major,userId,userPw) => {
+    alert("이메일로 인증링크를 전송하였습니다. 이메일을 확인해주세요.");
+    
+
+  }
   const onAdminSignup = () => {
     alert('회원가입이 완료되었습니다. 다시 로그인해주세요.');
 

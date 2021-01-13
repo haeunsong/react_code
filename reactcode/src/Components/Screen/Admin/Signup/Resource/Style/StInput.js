@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import React from "react";
 import { TextField, Button } from '@material-ui/core';
 import { makeStyles } from "@material-ui/styles";
 
@@ -22,17 +22,18 @@ export const InputStyle = makeStyles ({
     },
 
 })
-export const InputViewer = ({ onChange, placeholder, type, value }) => {
+export const InputViewer = ({ onChange, placeholder, type, value,errmsg }) => {
     const classes = InputStyle();
     return (
         <form className={classes.container}>
             <TextField
-                defaultValue={value}
+                value={value}
                 onChange={onChange}
                 placeholder={placeholder}
                 type={type}
                 className={classes.textField}
                 variant="outlined"
+                autoFocus
             />
         </form>
 

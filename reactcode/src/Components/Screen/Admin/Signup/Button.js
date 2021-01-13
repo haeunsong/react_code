@@ -4,9 +4,7 @@ import {AdminSignupButtonViewer,CertifyEmailButtonViewer,BackButtonViewer} from 
 export const onSignup=(id,password)=>{
     console.log(id,password);
 }
-export const onCertifyEmail=()=>{
-    alert("이메일로 인증링크를 전송하였습니다. 이메일을 확인해주세요.")
-}
+
 export const AdminSignupButton = ({ onClick }) => (
     <AdminSignupButtonViewer onClick={onClick}>가입하기</AdminSignupButtonViewer>
 );
