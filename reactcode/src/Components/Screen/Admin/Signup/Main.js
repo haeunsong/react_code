@@ -30,11 +30,12 @@ const Main = ({ setClickView }) => {
       })
     };
     fetch('https://skhuspass.sleepy-owl.com/user/adminsignup', requestOptions)
-      .then((resp) => resp.json())
-      .then((resp) => {
-        if (resp.ok) console.log("OK");
-      })
-  }, []);
+    .then((resp) => {
+      if (resp.ok) console.log("OK");
+      else console.log("ERROR!!!")
+    })
+    .then((resp) => resp.json())
+  },[]);
 
   //   /user/adminsignup 
   const onCertifyEmail = async (email, userName, major, userId, userPw) => {

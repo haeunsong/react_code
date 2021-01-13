@@ -1,5 +1,4 @@
 import React, { useState,useEffect } from 'react';
-import axios from 'axios';
 
 const Main = () => {
   const [areas,setAreas] = useState(null);
@@ -11,11 +10,8 @@ const Main = () => {
       try {
         // 요청이 시작할 때는 error와 areas 초기화
         setError(null); setAreas(null); setLoading(true);
-        const response = await axios.get(
-          '전체 건물 조회 api 주소'
-        );
+        const response = await fetch('전체 건물 조회 api 주소');
         setAreas(response.data);
-
       }catch(e) {
         setError(e);
         console.log(e);
